@@ -1,14 +1,68 @@
-{
-    "chocolate chip": 150,
-    "oatmeal raisin": 120,
-    "peanut butter": 130,
-    "snickerdoodle": 140,
-    "double chocolate": 160,
-    "sugar cookie": 100,
-    "gingerbread": 120,
-    "shortbread": 130,
-    "biscotti": 150,
-    "vanilla creme": 160,
-    "white chocolate macadamia": 140
-}
-   
+[
+    {
+        "name":"chocolate chip",
+        "inStock":true,
+        "priceInCents":150,
+        "containsNuts":false
+    },
+    {
+        "name":"oatmeal raisin",
+        "inStock":true,
+        "priceInCents":120,
+        "containsNuts":true
+    },
+    {
+        "name":"peanut butter",
+        "inStock":true,
+        "priceInCents":130,
+        "containsNuts":true
+    },
+    {
+        "name":"snickerdoodle",
+        "inStock":true,
+        "priceInCents":140,
+        "containsNuts":false
+    },
+    {
+        "name":"double chocolate",
+        "inStock":true,
+        "priceInCents":160,
+        "containsNuts":false
+    },
+    {
+        "name":"sugar cookie",
+        "inStock":true,
+        "priceInCents":100,
+        "containsNuts":false
+    },
+    {
+        "name":"gingerbread",
+        "inStock":true,
+        "priceInCents":120,
+        "containsNuts":false
+    },
+    {
+        "name":"shortbread",
+        "inStock":true,
+        "priceInCents":130,
+        "containsNuts":false
+    },
+    {
+        "name":"biscotti",
+        "inStock":true,
+        "priceInCents":150,
+        "containsNuts":false
+    },
+    {
+        "name":"vanilla creme",
+        "inStock":true,
+        "priceInCents":160,
+        "containsNuts":false
+    },
+    {
+        "name":"white chocolate macadamia",
+        "inStock":true,
+        "priceInCents":140,
+        "containsNuts":true
+    }
+]
