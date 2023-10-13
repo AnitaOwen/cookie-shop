@@ -1,6 +1,6 @@
 const { readJSONFile, writeJSONFile } = require('./src/helpers');
 const cookies = readJSONFile('./data', 'cookies.json');
-const { index, create, show, update } = require('./src/cookieController')
+const { index, create, show, update, destroy, total } = require('./src/cookieController')
 
 const inform = console.log;
 
@@ -27,6 +27,13 @@ function run() {
         case "update":
             updatedCookies = update(cookies, cookie, process.argv[4]);
             writeToFile = true;
+            break;
+        case "destroy":
+            updatedCookies = destroy(cookies, cookie);
+            writeToFile = true;
+            break;
+        case "total":
+            inform(`Total price of all cookies added: ${total(cookies)}`);
             break;
         default:
             inform('There was an error.');

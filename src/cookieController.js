@@ -33,9 +33,27 @@ function show(cookies, cookieId) {
     return cookies
   }
 
+  function destroy(cookies, cookieId) {
+    const index = cookies.findIndex((cookie) => cookie.id === cookieId);
+    if (index > -1) {
+      cookies.splice(index, 1);
+      inform('Cookie successfully removed from list');
+    } else {
+      inform('Cookie not found. No action taken');
+    }
+    return cookies
+  }
+
+  function total(cookies) {
+    const total = cookies.reduce((acc, current) => acc + current.priceInCents, 0);
+    return `$${(total / 100).toFixed(2)}`
+  }
+
 module.exports = {
     index,
     create,
     show, 
-    update
+    update,
+    destroy, 
+    total
 }
