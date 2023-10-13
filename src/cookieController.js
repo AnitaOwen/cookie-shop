@@ -6,10 +6,11 @@ function index(cookies) {
   }
 
 function create(cookies, cookieName){
+    const found = cookiePrices.find((cookie) => cookie.name === cookieName)
     const cookie = { 
         name: cookieName, 
         id: nanoid(4),
-        priceInCents: cookiePrices[cookieName] || 100
+        priceInCents: found.priceInCents || 100
     }
     cookies.push(cookie)
     return cookies

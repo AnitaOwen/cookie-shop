@@ -1,68 +1,68 @@
 [
     {
         "name":"chocolate chip",
-        "inStock":true,
         "priceInCents":150,
-        "containsNuts":false
+        "containsNuts":false,
+        "isVegan": false
     },
     {
         "name":"oatmeal raisin",
-        "inStock":true,
         "priceInCents":120,
-        "containsNuts":true
+        "containsNuts":true,
+        "isVegan": false
     },
     {
         "name":"peanut butter",
-        "inStock":true,
         "priceInCents":130,
-        "containsNuts":true
+        "containsNuts":true,
+        "isVegan": true
     },
     {
         "name":"snickerdoodle",
-        "inStock":true,
         "priceInCents":140,
-        "containsNuts":false
+        "containsNuts":false,
+        "isVegan": false
     },
     {
         "name":"double chocolate",
-        "inStock":true,
         "priceInCents":160,
-        "containsNuts":false
+        "containsNuts":false,
+        "isVegan": true
     },
     {
         "name":"sugar cookie",
-        "inStock":true,
         "priceInCents":100,
-        "containsNuts":false
+        "containsNuts":false,
+        "isVegan": false
     },
     {
         "name":"gingerbread",
-        "inStock":true,
         "priceInCents":120,
-        "containsNuts":false
+        "containsNuts":false,
+        "isVegan": true
     },
     {
         "name":"shortbread",
-        "inStock":true,
         "priceInCents":130,
-        "containsNuts":false
+        "containsNuts":false,
+        "isVegan": false
     },
     {
         "name":"biscotti",
-        "inStock":true,
         "priceInCents":150,
-        "containsNuts":false
+        "containsNuts":false,
+        "isVegan": false
     },
     {
         "name":"vanilla creme",
-        "inStock":true,
         "priceInCents":160,
-        "containsNuts":false
+        "containsNuts":false,
+        "isVegan": false
     },
     {
         "name":"white chocolate macadamia",
-        "inStock":true,
         "priceInCents":140,
-        "containsNuts":true
+        "containsNuts":true,
+        "isVegan": false
     }
 ]

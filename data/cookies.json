@@ -1,7 +1,12 @@
 [
   {
-    "name": "gingerbread",
-    "id": "_Vvr",
+    "name": "oatmeal raisin",
+    "id": "zBVv",
     "priceInCents": 120
+  },
+  {
+    "name": "shortbread",
+    "id": "r7t9",
+    "priceInCents": 130
   }
 ]
