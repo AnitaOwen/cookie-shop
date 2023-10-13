@@ -1,14 +1,14 @@
 [
   {
-    "name": "biscotti",
-    "id": "V9Id",
+    "name": "chocolate chip",
+    "id": "yFr7",
     "priceInCents": 150,
-    "description": "Crunchy Italian biscotti, perfect for dipping in coffee or tea."
+    "description": "Classic chocolate chip cookies with a perfect balance of sweet and chocolatey."
   },
   {
-    "name": "oatmeal raisin",
-    "id": "BRrI",
-    "priceInCents": 120,
-    "description": "Chewy oatmeal cookies with plump raisins for a delightful texture and flavor."
+    "name": "biscotti",
+    "id": "z4Mx",
+    "priceInCents": 150,
+    "description": "Crunchy Italian biscotti, perfect for dipping in coffee or tea."
   }
 ]
