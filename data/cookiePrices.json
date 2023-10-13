@@ -75,5 +75,40 @@
         "containsNuts": true,
         "isVegan": false,
         "description": "Buttery cookies with chunks of white chocolate and macadamia nuts."
+    },
+    {
+        "name": "peanut butter chocolate chip",
+        "priceInCents": 170,
+        "containsNuts": true,
+        "isVegan": false,
+        "description": "A delightful combination of peanut butter and chocolate chips."
+    },
+    {
+        "name": "oatmeal cranberry",
+        "priceInCents": 140,
+        "containsNuts": true,
+        "isVegan": true,
+        "description": "Chewy oatmeal cookies with tart cranberries for a sweet and tangy twist."
+    },
+    {
+        "name": "lemon zest",
+        "priceInCents": 120,
+        "containsNuts": false,
+        "isVegan": true,
+        "description": "Bright and zesty lemon-flavored cookies, perfect for a refreshing treat."
+    },
+    {
+        "name": "snickerdoodle chocolate chip",
+        "priceInCents": 150,
+        "containsNuts": false,
+        "isVegan": false,
+        "description": "A delightful blend of snickerdoodle and chocolate chip goodness."
+    },
+    {
+        "name": "almond biscotti",
+        "priceInCents": 160,
+        "containsNuts": true,
+        "isVegan": false,
+        "description": "Crunchy Italian biscotti with a delightful almond flavor."
     }
 ]

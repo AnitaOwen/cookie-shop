@@ -1,14 +1,20 @@
 [
   {
-    "name": "gingerbread",
-    "id": "8ysS",
-    "priceInCents": 120,
-    "description": "Spiced gingerbread cookies with a warm and cozy flavor."
+    "name": "snickerdoodle chocolate chip",
+    "id": "5wuq",
+    "priceInCents": 150,
+    "description": "A delightful blend of snickerdoodle and chocolate chip goodness."
   },
   {
-    "name": "shortbread",
-    "id": "KVfw",
-    "priceInCents": 130,
-    "description": "Buttery and crumbly shortbread cookies that melt in your mouth."
+    "name": "biscotti",
+    "id": "Q2Yo",
+    "priceInCents": 150,
+    "description": "Crunchy Italian biscotti, perfect for dipping in coffee or tea."
+  },
+  {
+    "name": "white chocolate macadamia",
+    "id": "CsaJ",
+    "priceInCents": 140,
+    "description": "Buttery cookies with chunks of white chocolate and macadamia nuts."
   }
 ]

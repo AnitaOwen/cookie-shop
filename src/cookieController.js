@@ -43,11 +43,13 @@ function show(cookies, cookieId) {
 }
 
   function update(cookies, cookieId, updatedCookie) {
+    const found = cookiePrices.find((cookie) => cookie.name === updatedCookie)
     const index = cookies.findIndex((cookie) => cookie.id === cookieId);
-    if (index > -1) {
+    if (index > -1 && found) {
       cookies[index].id = cookieId;
       cookies[index].name = updatedCookie;
-      cookies[index].priceInCents = cookiePrices[updatedCookie] || 100
+      cookies[index].priceInCents = found.priceInCents;
+      cookies[index].description = found.description
       inform('Cookie successfully updated');
     } else {
       inform('Cookie not found. No action taken');
