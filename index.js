@@ -1,6 +1,6 @@
 const { readJSONFile, writeJSONFile } = require('./src/helpers');
 const cookies = readJSONFile('./data', 'cookies.json');
-const { index, create } = require('./src/cookieController')
+const { index, create, show, update } = require('./src/cookieController')
 
 const inform = console.log;
 
@@ -18,6 +18,14 @@ function run() {
             break;
         case "create":
             updatedCookies = create(cookies, cookie);
+            writeToFile = true;
+            break;
+        case "show":
+            const cookieView = show(cookies, cookie);
+            inform(cookieView);
+            break;
+        case "update":
+            updatedCookies = update(cookies, cookie, process.argv[4]);
             writeToFile = true;
             break;
         default:

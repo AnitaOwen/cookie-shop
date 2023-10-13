@@ -15,7 +15,27 @@ function create(cookies, cookieName){
     return cookies
 }
 
+function show(cookies, cookieId) {
+    const cookie = cookies.find((cookie) => cookie.id === cookieId);
+    return cookie.id + ' ' + cookie.name + ' $' + (cookie.priceInCents/100).toFixed(2);
+  }
+
+  function update(cookies, cookieId, updatedCookie) {
+    const index = cookies.findIndex((cookie) => cookie.id === cookieId);
+    if (index > -1) {
+      cookies[index].id = cookieId;
+      cookies[index].name = updatedCookie;
+      cookies[index].priceInCents = cookiePrices[updatedCookie] || 100
+      inform('Cookie successfully updated');
+    } else {
+      inform('Cookie not found. No action taken');
+    }
+    return cookies
+  }
+
 module.exports = {
     index,
     create,
+    show, 
+    update
 }
