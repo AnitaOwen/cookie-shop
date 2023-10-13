@@ -73,7 +73,8 @@ function show(cookies, cookieId) {
 
   function total(cookies) {
     const total = cookies.reduce((acc, current) => acc + current.priceInCents, 0);
-    return `$${(total / 100).toFixed(2)}`
+    const cartItems = cookies.map((cookie) => cookie.name + ' $' + (cookie.priceInCents/100).toFixed(2))
+    return `${cartItems.join('\n')} \n(${cartItems.length} items) Total: $${(total / 100).toFixed(2)}`
   }
 
 module.exports = {

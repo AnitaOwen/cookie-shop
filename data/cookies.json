@@ -1,14 +1,14 @@
 [
   {
-    "name": "white chocolate macadamia",
-    "id": "Jgx-",
-    "priceInCents": 140,
-    "description": "Buttery cookies with chunks of white chocolate and macadamia nuts."
+    "name": "biscotti",
+    "id": "V9Id",
+    "priceInCents": 150,
+    "description": "Crunchy Italian biscotti, perfect for dipping in coffee or tea."
   },
   {
-    "name": "white chocolate macadamia",
-    "id": "-em7",
-    "priceInCents": 140,
-    "description": "Buttery cookies with chunks of white chocolate and macadamia nuts."
+    "name": "oatmeal raisin",
+    "id": "BRrI",
+    "priceInCents": 120,
+    "description": "Chewy oatmeal cookies with plump raisins for a delightful texture and flavor."
   }
 ]

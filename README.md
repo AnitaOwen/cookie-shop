@@ -31,5 +31,6 @@ user can delete all items from the cart
 destroy <id>
 user can delete an item from the cart using the id
 
-
+total 
+user can see a total of all items added to the cart
 

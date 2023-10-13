@@ -33,7 +33,8 @@ function run() {
             writeToFile = true;
             break;
         case "total":
-            inform(`Total price of all cookies added: ${total(cookies)}`);
+            const totalView = total(cookies)
+            inform(totalView);
             break;
         default:
             inform('There was an error.');
