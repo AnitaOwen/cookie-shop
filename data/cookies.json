@@ -1,19 +1,13 @@
 [
   {
-    "name": "snickerdoodle chocolate chip",
-    "id": "5wuq",
-    "priceInCents": 150,
-    "description": "A delightful blend of snickerdoodle and chocolate chip goodness."
-  },
-  {
-    "name": "biscotti",
-    "id": "Q2Yo",
-    "priceInCents": 150,
-    "description": "Crunchy Italian biscotti, perfect for dipping in coffee or tea."
+    "name": "white chocolate macadamia",
+    "id": "Jgx-",
+    "priceInCents": 140,
+    "description": "Buttery cookies with chunks of white chocolate and macadamia nuts."
   },
   {
     "name": "white chocolate macadamia",
-    "id": "CsaJ",
+    "id": "-em7",
     "priceInCents": 140,
     "description": "Buttery cookies with chunks of white chocolate and macadamia nuts."
   }

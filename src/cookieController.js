@@ -58,6 +58,9 @@ function show(cookies, cookieId) {
   }
 
   function destroy(cookies, cookieId) {
+    if(cookieId === "all"){
+        return cookies = []
+    }
     const index = cookies.findIndex((cookie) => cookie.id === cookieId);
     if (index > -1) {
       cookies.splice(index, 1);

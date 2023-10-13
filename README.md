@@ -25,5 +25,11 @@ A user can update an item.
 When a user performs an action like creating or deleting an item, the data file is updated correctly. If the JSON is malformed, there is some logic to prevent writing to the file and thus corrupting the data file.
 
 
+destroy all
+user can delete all items from the cart
+
+destroy <id>
+user can delete an item from the cart using the id
+
 
 
