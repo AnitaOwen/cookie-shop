@@ -1,5 +1,6 @@
 const { nanoid } = require('nanoid')
 const cookiePrices = require('../data/cookiePrices.json')
+const inform = console.log;
 
 function index(cookies) {
     return cookies.map((cookie) => cookie.id + ' ' + cookie.name + ' $' + (cookie.priceInCents/100).toFixed(2)).join('\n');
@@ -7,13 +8,18 @@ function index(cookies) {
 
 function create(cookies, cookieName){
     const found = cookiePrices.find((cookie) => cookie.name === cookieName)
-    const cookie = { 
-        name: cookieName, 
-        id: nanoid(4),
-        priceInCents: found.priceInCents || 100
+    if(found){
+        const cookie = {
+            name: cookieName, 
+            id: nanoid(4),
+            priceInCents: found.priceInCents,
+            description: found.description
+        }
+        cookies.push(cookie)
+    } else if(found === undefined){
+        inform('Cookie not found. No action taken')
     }
-    cookies.push(cookie)
-    return cookies
+    return cookies    
 }
 
 function show(cookies, cookieId) {
@@ -22,14 +28,19 @@ function show(cookies, cookieId) {
     } else if(cookieId === "vegan"){
         const vegan = cookiePrices.filter((cookie) => cookie.isVegan === true)
         return vegan.map((cookie) => '(vegan) ' + cookie.name + ' $' + (cookie.priceInCents/100).toFixed(2)).join('\n')
-    } else if (cookieId === "no nuts"){
+    } else if (cookieId === "nutfree"){
         const nutFree = cookiePrices.filter((cookie) => cookie.containsNuts === false)
         return nutFree.map((cookie) => '(nut-free) ' + cookie.name + ' $' + (cookie.priceInCents/100).toFixed(2)).join('\n')
+    } 
+    
+    const found = cookies.find((cookie) => cookie.id === cookieId);
+    if(found === undefined){
+        inform('Cookie not found. No action taken')
     } else {
-    const cookie = cookies.find((cookie) => cookie.id === cookieId);
-    return cookie.id + ' ' + cookie.name + ' $' + (cookie.priceInCents/100).toFixed(2)
+        const price = (found.priceInCents/100).toFixed(2)
+        return `${found.id} ${found.name} $${price} \n ${found.description}`
     }
-  }
+}
 
   function update(cookies, cookieId, updatedCookie) {
     const index = cookies.findIndex((cookie) => cookie.id === cookieId);

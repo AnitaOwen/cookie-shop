@@ -1,68 +1,79 @@
 [
     {
-        "name":"chocolate chip",
-        "priceInCents":150,
-        "containsNuts":false,
-        "isVegan": false
+        "name": "chocolate chip",
+        "priceInCents": 150,
+        "containsNuts": false,
+        "isVegan": false,
+        "description": "Classic chocolate chip cookies with a perfect balance of sweet and chocolatey."
     },
     {
-        "name":"oatmeal raisin",
-        "priceInCents":120,
-        "containsNuts":true,
-        "isVegan": false
+        "name": "oatmeal raisin",
+        "priceInCents": 120,
+        "containsNuts": true,
+        "isVegan": false,
+        "description": "Chewy oatmeal cookies with plump raisins for a delightful texture and flavor."
     },
     {
-        "name":"peanut butter",
-        "priceInCents":130,
-        "containsNuts":true,
-        "isVegan": true
+        "name": "peanut butter",
+        "priceInCents": 130,
+        "containsNuts": true,
+        "isVegan": true,
+        "description": "Rich and nutty peanut butter cookies, suitable for vegans."
     },
     {
-        "name":"snickerdoodle",
-        "priceInCents":140,
-        "containsNuts":false,
-        "isVegan": false
+        "name": "snickerdoodle",
+        "priceInCents": 140,
+        "containsNuts": false,
+        "isVegan": false,
+        "description": "Soft and buttery cinnamon-sugar cookies with a hint of spice."
     },
     {
-        "name":"double chocolate",
-        "priceInCents":160,
-        "containsNuts":false,
-        "isVegan": true
+        "name": "double chocolate",
+        "priceInCents": 160,
+        "containsNuts": false,
+        "isVegan": true,
+        "description": "Decadent cookies loaded with double the chocolate goodness."
     },
     {
-        "name":"sugar cookie",
-        "priceInCents":100,
-        "containsNuts":false,
-        "isVegan": false
+        "name": "sugar cookie",
+        "priceInCents": 100,
+        "containsNuts": false,
+        "isVegan": false,
+        "description": "Delightfully simple and sweet sugar cookies, perfect for any occasion."
     },
     {
-        "name":"gingerbread",
-        "priceInCents":120,
-        "containsNuts":false,
-        "isVegan": true
+        "name": "gingerbread",
+        "priceInCents": 120,
+        "containsNuts": false,
+        "isVegan": true,
+        "description": "Spiced gingerbread cookies with a warm and cozy flavor."
     },
     {
-        "name":"shortbread",
-        "priceInCents":130,
-        "containsNuts":false,
-        "isVegan": false
+        "name": "shortbread",
+        "priceInCents": 130,
+        "containsNuts": false,
+        "isVegan": false,
+        "description": "Buttery and crumbly shortbread cookies that melt in your mouth."
     },
     {
-        "name":"biscotti",
-        "priceInCents":150,
-        "containsNuts":false,
-        "isVegan": false
+        "name": "biscotti",
+        "priceInCents": 150,
+        "containsNuts": false,
+        "isVegan": false,
+        "description": "Crunchy Italian biscotti, perfect for dipping in coffee or tea."
     },
     {
-        "name":"vanilla creme",
-        "priceInCents":160,
-        "containsNuts":false,
-        "isVegan": false
+        "name": "vanilla creme",
+        "priceInCents": 160,
+        "containsNuts": false,
+        "isVegan": false,
+        "description": "Cookies with a delicate vanilla cream filling for a sweet treat."
     },
     {
-        "name":"white chocolate macadamia",
-        "priceInCents":140,
-        "containsNuts":true,
-        "isVegan": false
+        "name": "white chocolate macadamia",
+        "priceInCents": 140,
+        "containsNuts": true,
+        "isVegan": false,
+        "description": "Buttery cookies with chunks of white chocolate and macadamia nuts."
     }
 ]

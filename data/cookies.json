@@ -1,12 +1,14 @@
 [
   {
-    "name": "oatmeal raisin",
-    "id": "zBVv",
-    "priceInCents": 120
+    "name": "gingerbread",
+    "id": "8ysS",
+    "priceInCents": 120,
+    "description": "Spiced gingerbread cookies with a warm and cozy flavor."
   },
   {
     "name": "shortbread",
-    "id": "r7t9",
-    "priceInCents": 130
+    "id": "KVfw",
+    "priceInCents": 130,
+    "description": "Buttery and crumbly shortbread cookies that melt in your mouth."
   }
 ]
