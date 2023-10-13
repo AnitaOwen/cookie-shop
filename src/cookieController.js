@@ -17,8 +17,18 @@ function create(cookies, cookieName){
 }
 
 function show(cookies, cookieId) {
+    if(cookieId === "menu"){
+        return cookiePrices.map((cookie) => cookie.name + ' $' + (cookie.priceInCents/100).toFixed(2)).join('\n')
+    } else if(cookieId === "vegan"){
+        const vegan = cookiePrices.filter((cookie) => cookie.isVegan === true)
+        return vegan.map((cookie) => '(vegan) ' + cookie.name + ' $' + (cookie.priceInCents/100).toFixed(2)).join('\n')
+    } else if (cookieId === "no nuts"){
+        const nutFree = cookiePrices.filter((cookie) => cookie.containsNuts === false)
+        return nutFree.map((cookie) => '(nut-free) ' + cookie.name + ' $' + (cookie.priceInCents/100).toFixed(2)).join('\n')
+    } else {
     const cookie = cookies.find((cookie) => cookie.id === cookieId);
-    return cookie.id + ' ' + cookie.name + ' $' + (cookie.priceInCents/100).toFixed(2);
+    return cookie.id + ' ' + cookie.name + ' $' + (cookie.priceInCents/100).toFixed(2)
+    }
   }
 
   function update(cookies, cookieId, updatedCookie) {
