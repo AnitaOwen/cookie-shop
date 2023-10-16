@@ -1,7 +1,7 @@
 {
   "name": "cookie-shop",
   "version": "1.0.0",
-  "description": "",
+  "description": "Cookie Shop Application: provides essential features for running a cookie shop, allowing users to create, view, update, and delete items in the cart, along with other helpful functions.",
   "main": "index.js",
   "scripts": {
     "test": "jest",

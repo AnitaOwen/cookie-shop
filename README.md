@@ -1,4 +1,6 @@
 
+![Image of a variety of cookies](https://images.squarespace-cdn.com/content/v1/559d9ae6e4b07f54795d8c45/1451952277941-4KP8BNVRTVNP3YLV9TAO/photo_top_cookiegroupshot.jpg?format=2500w)
+
 # Cookie Shop Application
 
 Welcome to the Cookie Shop Application, a simple yet powerful tool for managing and enjoying your favorite cookies. This application provides essential features for running a cookie shop, allowing users to create, view, update, and delete items in the cart, along with other helpful functions.
@@ -123,4 +125,5 @@ We welcome contributions to the Cookie Shop Application. If you have ideas for i
 
 Happy cookie shopping!
 
-![Image of a variety of cookies](https://images.squarespace-cdn.com/content/v1/559d9ae6e4b07f54795d8c45/1451952277941-4KP8BNVRTVNP3YLV9TAO/photo_top_cookiegroupshot.jpg?format=2500w)
+![Cute gif of a cartoon charatcer eating a cookie](https://media.tenor.com/zluE5zNOkOkAAAAC/cute-eating.gif)
+
