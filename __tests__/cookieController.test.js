@@ -426,16 +426,59 @@ describe("Cookie Controller Tests", ()=>{
             ]
             const actual = total(input)
             const expected = 
-            "chocolate chip $1.50\n" +
-            "biscotti $1.50\n" +
-            "(2 items) Total: $3.00"
+            "chocolate chip $1.50 (x1)\n" +
+            "biscotti $1.50 (x1)\n" +
+            "---------------------------------\n" +
+            "(2 items) TOTAL: $3.00"
             expect(actual).toEqual(expected)
         })
 
         it("should return $0.00 if cart is empty", ()=>{
             const input = []
             const actual = total(input)
-            const expected = "\n(0 items) Total: $0.00"
+            const expected = "\n---------------------------------\n(0 items) TOTAL: $0.00"
+            expect(actual).toBe(expected)
+        })
+
+        it("should return a list of unique items with the correct count and total", ()=>{
+            const input = [
+                {
+                "name": "biscotti",
+                "id": "pjx3",
+                "priceInCents": 150,
+                "description": "Crunchy Italian biscotti, perfect for dipping in coffee or tea."
+                },
+                {
+                "name": "biscotti",
+                "id": "SvVN",
+                "priceInCents": 150,
+                "description": "Crunchy Italian biscotti, perfect for dipping in coffee or tea."
+                },
+                {
+                "name": "biscotti",
+                "id": "RcLP",
+                "priceInCents": 150,
+                "description": "Crunchy Italian biscotti, perfect for dipping in coffee or tea."
+                },
+                {
+                "name": "almond biscotti",
+                "id": "ug5F",
+                "priceInCents": 160,
+                "description": "Crunchy Italian biscotti with a delightful almond flavor."
+                },
+                {
+                "name": "almond biscotti",
+                "id": "qNyV",
+                "priceInCents": 160,
+                "description": "Crunchy Italian biscotti with a delightful almond flavor."
+                }
+            ]
+            const actual = total(input)
+            const expected = 
+            "biscotti $1.50 (x3)\n" +
+            "almond biscotti $1.60 (x2)\n" +
+            "---------------------------------\n" +
+            "(5 items) TOTAL: $7.70"
             expect(actual).toBe(expected)
         })
     })

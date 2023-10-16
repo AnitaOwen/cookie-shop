@@ -1,1 +1,32 @@
-[]
+[
+  {
+    "name": "biscotti",
+    "id": "pjx3",
+    "priceInCents": 150,
+    "description": "Crunchy Italian biscotti, perfect for dipping in coffee or tea."
+  },
+  {
+    "name": "biscotti",
+    "id": "SvVN",
+    "priceInCents": 150,
+    "description": "Crunchy Italian biscotti, perfect for dipping in coffee or tea."
+  },
+  {
+    "name": "biscotti",
+    "id": "RcLP",
+    "priceInCents": 150,
+    "description": "Crunchy Italian biscotti, perfect for dipping in coffee or tea."
+  },
+  {
+    "name": "almond biscotti",
+    "id": "ug5F",
+    "priceInCents": 160,
+    "description": "Crunchy Italian biscotti with a delightful almond flavor."
+  },
+  {
+    "name": "almond biscotti",
+    "id": "qNyV",
+    "priceInCents": 160,
+    "description": "Crunchy Italian biscotti with a delightful almond flavor."
+  }
+]

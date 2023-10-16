@@ -77,8 +77,26 @@ function show(cookies, cookieId) {
 
   function total(cookies) {
     const total = cookies.reduce((acc, current) => acc + current.priceInCents, 0);
-    const cartItems = cookies.map((cookie) => cookie.name + ' $' + (cookie.priceInCents/100).toFixed(2))
-    return `${cartItems.join('\n')}\n(${cartItems.length} items) Total: $${(total / 100).toFixed(2)}`
+    const count = {}
+    const cartItems = []
+
+    for(let cookie of cookies){
+      const name = cookie.name
+      // const priceInDollars = (cookie.priceInCents/100).toFixed(2)
+      if(!count[name]){
+        count[name] = 1
+      } else {
+        count[name]++
+      }
+
+      if(count[name] === 1){
+        cartItems.push(cookie)
+      }
+    }
+
+    const formattedCartItems = cartItems.map((item) => `${item.name} $${(item.priceInCents/100).toFixed(2)} (x${count[item.name]})`)
+    
+    return `${formattedCartItems.join('\n')}\n---------------------------------\n(${cookies.length} items) TOTAL: $${(total / 100).toFixed(2)}`
   }
 
 module.exports = {

@@ -3,6 +3,15 @@
 
 Welcome to the Cookie Shop Application, a simple yet powerful tool for managing and enjoying your favorite cookies. This application provides essential features for running a cookie shop, allowing users to create, view, update, and delete items in the cart, along with other helpful functions.
 
+## Getting Started
+
+To get started with the Cookie Shop Application, you need to set up your development environment, install the necessary dependencies, and configure your data storage.
+
+1. Clone the repository to your local machine.
+2. Install the required dependencies using `npm install nanoid@3`.
+3. Configure your data storage settings for proper data management.
+
+
 ## Features
 
 ### Create
@@ -106,21 +115,6 @@ This will remove the item with the matching cookie id from the cart.
 ```
 npm run total
 ```
-
-### Data File Integrity
-- The application includes logic to handle data file integrity. It ensures that actions like creating or deleting items won't corrupt the data file, even if the JSON data is malformed.
-
-
-## Getting Started
-
-To get started with the Cookie Shop Application, you need to set up your development environment, install the necessary dependencies, and configure your data storage.
-
-1. Clone the repository to your local machine.
-2. Install the required dependencies using `npm install`.
-3. Configure your data storage settings for proper data management.
-4. Start the application using `npm start`.
-
-Please ensure you have a clear understanding of the technologies used and the project structure to effectively manage your cookie shop.
 
 ## Contributing
 
