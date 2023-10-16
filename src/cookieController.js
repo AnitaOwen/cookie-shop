@@ -3,8 +3,13 @@ const cookiePrices = require('../data/cookiePrices.json')
 const inform = console.log;
 
 function index(cookies) {
-    return cookies.map((cookie) => cookie.id + ' ' + cookie.name + ' $' + (cookie.priceInCents/100).toFixed(2)).join('\n');
+  if(cookies.length === 0){
+    inform('The cart is empty')
+    // return 'The cart is empty.'
   }
+  const formattedCookies = cookies.map((cookie) => cookie.id + ' ' + cookie.name + ' $' + (cookie.priceInCents/100).toFixed(2)).join('\n')
+  return formattedCookies
+}
 
 function create(cookies, cookieName){
     const found = cookiePrices.find((cookie) => cookie.name === cookieName)
@@ -18,6 +23,7 @@ function create(cookies, cookieName){
         cookies.push(cookie)
     } else if(found === undefined){
         inform('Cookie not found. No action taken')
+        // return 'Cookie not found. No action taken'
     }
     return cookies    
 }
@@ -38,7 +44,7 @@ function show(cookies, cookieId) {
         inform('Cookie not found. No action taken')
     } else {
         const price = (found.priceInCents/100).toFixed(2)
-        return `${found.id} ${found.name} $${price} \n ${found.description}`
+        return `${found.id} ${found.name} $${price} \n${found.description}`
     }
 }
 
@@ -74,7 +80,7 @@ function show(cookies, cookieId) {
   function total(cookies) {
     const total = cookies.reduce((acc, current) => acc + current.priceInCents, 0);
     const cartItems = cookies.map((cookie) => cookie.name + ' $' + (cookie.priceInCents/100).toFixed(2))
-    return `${cartItems.join('\n')} \n(${cartItems.length} items) Total: $${(total / 100).toFixed(2)}`
+    return `${cartItems.join('\n')}\n(${cartItems.length} items) Total: $${(total / 100).toFixed(2)}`
   }
 
 module.exports = {

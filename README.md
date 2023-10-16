@@ -6,7 +6,7 @@ Welcome to the Cookie Shop Application, a simple yet powerful tool for managing 
 ## Features
 
 ### Create
-- A user can create a new item and add it to the cart.
+- A user can create an item and add it to the cart.
 - Each created item is assigned a unique ID, ensuring accurate identification and management.
 
 >Use `npm run create <cookie-name>` to add a new item to the cart
@@ -113,9 +113,9 @@ npm run total
 To get started with the Cookie Shop Application, you need to set up your development environment, install the necessary dependencies, and configure your data storage.
 
 1. Clone the repository to your local machine.
-2. Install the required dependencies using `npm install` or `yarn install`.
+2. Install the required dependencies using `npm install`.
 3. Configure your data storage settings for proper data management.
-4. Start the application using `npm start` or `yarn start`.
+4. Start the application using `npm start`.
 
 Please ensure you have a clear understanding of the technologies used and the project structure to effectively manage your cookie shop.
 
@@ -123,9 +123,6 @@ Please ensure you have a clear understanding of the technologies used and the pr
 
 We welcome contributions to the Cookie Shop Application. If you have ideas for improvements or want to report issues, please open a GitHub issue and submit a pull request.
 
-## License
-
-This project is licensed under the MIT License. Feel free to use, modify, and distribute it according to the terms of the license.
 
 Happy cookie shopping!
 
