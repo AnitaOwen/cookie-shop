@@ -19,7 +19,7 @@ To get started with the Cookie Shop Application, you need to set up your develop
 ### Create
 - A user can create an item and add it to the cart.
 - Each created item is assigned a unique ID, ensuring accurate identification and management.
-- Cookie names are case insensitive, but spaces do matter!
+- Cookie names are not case sensitive, but spaces do matter!
 
 >Use `npm run create <cookie-name>` to add a new item to the cart
 ```
@@ -77,7 +77,7 @@ npm run show nutfree
 
 ### Update
 - A user can update the details of an item in the cart, ensuring accurate and personalized information.
-- Cookie names are case insensitive, but spaces do matter!
+- Cookie names are not case sensitive, but spaces do matter!
 >Use `npm run update <cookie-id> <updated-cookie-name>` to change a current cart item to be a different item. 
 - 
 ```
@@ -125,5 +125,5 @@ We welcome contributions to the Cookie Shop Application. If you have ideas for i
 
 Happy cookie shopping!
 
-![Cute gif of a cartoon charatcer eating a cookie](https://media.tenor.com/zluE5zNOkOkAAAAC/cute-eating.gif)
+![Cute gif of a cartoon character eating a cookie](https://media.tenor.com/zluE5zNOkOkAAAAC/cute-eating.gif)
 
