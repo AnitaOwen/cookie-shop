@@ -5,17 +5,16 @@ const inform = console.log;
 function index(cookies) {
   if(cookies.length === 0){
     inform('The cart is empty')
-    // return 'The cart is empty.'
   }
   const formattedCookies = cookies.map((cookie) => cookie.id + ' ' + cookie.name + ' $' + (cookie.priceInCents/100).toFixed(2)).join('\n')
   return formattedCookies
 }
 
 function create(cookies, cookieName){
-    const found = cookiePrices.find((cookie) => cookie.name === cookieName)
+    const found = cookiePrices.find((cookie) => cookie.name === cookieName.toLowerCase())
     if(found){
         const cookie = {
-            name: cookieName, 
+            name: found.name, 
             id: nanoid(4),
             priceInCents: found.priceInCents,
             description: found.description
@@ -23,7 +22,6 @@ function create(cookies, cookieName){
         cookies.push(cookie)
     } else if(found === undefined){
         inform('Cookie not found. No action taken')
-        // return 'Cookie not found. No action taken'
     }
     return cookies    
 }
@@ -49,11 +47,11 @@ function show(cookies, cookieId) {
 }
 
   function update(cookies, cookieId, updatedCookie) {
-    const found = cookiePrices.find((cookie) => cookie.name === updatedCookie)
+    const found = cookiePrices.find((cookie) => cookie.name === updatedCookie.toLowerCase())
     const index = cookies.findIndex((cookie) => cookie.id === cookieId);
     if (index > -1 && found) {
       cookies[index].id = cookieId;
-      cookies[index].name = updatedCookie;
+      cookies[index].name = found.name;
       cookies[index].priceInCents = found.priceInCents;
       cookies[index].description = found.description
       inform('Cookie successfully updated');

@@ -8,6 +8,7 @@ Welcome to the Cookie Shop Application, a simple yet powerful tool for managing 
 ### Create
 - A user can create an item and add it to the cart.
 - Each created item is assigned a unique ID, ensuring accurate identification and management.
+- Cookie names are case insensitive, but spaces do matter!
 
 >Use `npm run create <cookie-name>` to add a new item to the cart
 ```
@@ -65,7 +66,9 @@ npm run show nutfree
 
 ### Update
 - A user can update the details of an item in the cart, ensuring accurate and personalized information.
+- Cookie names are case insensitive, but spaces do matter!
 >Use `npm run update <cookie-id> <updated-cookie-name>` to change a current cart item to be a different item. 
+- 
 ```
 npm run update yFr7 "chocolate chip"
 ```

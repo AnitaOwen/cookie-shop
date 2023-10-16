@@ -58,6 +58,21 @@ describe("Cookie Controller Tests", ()=>{
             const expected = []
             expect(actual).toEqual(expected)
         })
+
+        it("should be case insensitive", ()=>{
+            const input1 = []
+            const input2 = "CHOcoLATE chIP"
+            const actual = create(input1, input2)
+            const expected = [
+                {
+                  "name": "chocolate chip",
+                  "id": expect.any(String),
+                  "priceInCents": 150,
+                  "description": "Classic chocolate chip cookies with a perfect balance of sweet and chocolatey."
+                }
+              ]
+            expect(actual).toEqual(expected)
+        })
     })
 
     describe("show", ()=>{
@@ -265,6 +280,42 @@ describe("Cookie Controller Tests", ()=>{
                   "id": "9lzu",
                   "priceInCents": 150,
                   "description": "Crunchy Italian biscotti, perfect for dipping in coffee or tea."
+                }
+            ]
+            expect(actual).toEqual(expected)
+        })
+
+        it("should be case insensitive", ()=>{
+            const input1 = 
+            [
+                {
+                  "name": "chocolate chip",
+                  "id": "Ffsu",
+                  "priceInCents": 150,
+                  "description": "Classic chocolate chip cookies with a perfect balance of sweet and chocolatey."
+                },
+                {
+                  "name": "biscotti",
+                  "id": "9lzu",
+                  "priceInCents": 150,
+                  "description": "Crunchy Italian biscotti, perfect for dipping in coffee or tea."
+                }
+            ]
+            const input2 = "Ffsu"
+            const input3 = "OATmeal RAIsin"
+            const actual = update(input1, input2, input3)
+            const expected = [
+                {
+                  "name": "oatmeal raisin",
+                  "id": "Ffsu",
+                  "priceInCents": 120,
+                  "description": "Chewy oatmeal cookies with plump raisins for a delightful texture and flavor."
+                },
+                {
+                "name": "biscotti",
+                "id": "9lzu",
+                "priceInCents": 150,
+                "description": "Crunchy Italian biscotti, perfect for dipping in coffee or tea."
                 }
             ]
             expect(actual).toEqual(expected)
