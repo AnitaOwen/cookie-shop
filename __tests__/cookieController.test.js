@@ -5,7 +5,7 @@ const inform = console.log;
 
 describe("Cookie Controller Tests", ()=>{
     describe("index", ()=>{
-        it("should take an array of cookies and return a formatted list of cookies", ()=>{
+        it("should take an array of cookie objects and return a formatted list of cookies", ()=>{
             const input = [
                 {
                   "name": "chocolate chip",
@@ -26,6 +26,13 @@ describe("Cookie Controller Tests", ()=>{
             "9lzu biscotti $1.50"
             expect(actual).toEqual(expected)
         })
+
+        it("should take an empty array and return an empty string", ()=>{
+            const input = []
+            const actual = index(input)
+            const expected = ""
+            expect(actual).toEqual(expected)
+        })
     })
 
     describe("create", ()=>{
@@ -41,6 +48,14 @@ describe("Cookie Controller Tests", ()=>{
                   "description": "Classic chocolate chip cookies with a perfect balance of sweet and chocolatey."
                 }
               ]
+            expect(actual).toEqual(expected)
+        })
+
+        it("should return an empty array if cookie name does not match any cookie object", ()=>{
+            const input1 = []
+            const input2 = "chocolate chipp"
+            const actual = create(input1, input2)
+            const expected = []
             expect(actual).toEqual(expected)
         })
     })
@@ -123,6 +138,27 @@ describe("Cookie Controller Tests", ()=>{
             "Crunchy Italian biscotti, perfect for dipping in coffee or tea."
             expect(actual).toEqual(expected)
         })
+
+        it("should return undefined if provided cookie id does not match any cookie object", ()=>{
+            const input1 = [
+                {
+                  "name": "chocolate chip",
+                  "id": "Ffsu",
+                  "priceInCents": 150,
+                  "description": "Classic chocolate chip cookies with a perfect balance of sweet and chocolatey."
+                },
+                {
+                  "name": "biscotti",
+                  "id": "9lzu",
+                  "priceInCents": 150,
+                  "description": "Crunchy Italian biscotti, perfect for dipping in coffee or tea."
+                }
+            ]
+            const input2 = "Ab23"
+            const actual = show(input1, input2)
+            const expected = undefined
+            expect(actual).toEqual(expected)
+        })
     })
 
     describe("update", ()=>{
@@ -161,6 +197,79 @@ describe("Cookie Controller Tests", ()=>{
             ]
             expect(actual).toEqual(expected)
         })
+
+        it("should return the original array if cookie id does not match", ()=>{
+            const input1 = 
+            [
+                {
+                  "name": "chocolate chip",
+                  "id": "Ffsu",
+                  "priceInCents": 150,
+                  "description": "Classic chocolate chip cookies with a perfect balance of sweet and chocolatey."
+                },
+                {
+                  "name": "biscotti",
+                  "id": "9lzu",
+                  "priceInCents": 150,
+                  "description": "Crunchy Italian biscotti, perfect for dipping in coffee or tea."
+                }
+            ]
+            const input2 = "Ab23"
+            const input3 = "oatmeal raisin"
+            const actual = update(input1, input2, input3)
+            const expected = [
+                {
+                  "name": "chocolate chip",
+                  "id": "Ffsu",
+                  "priceInCents": 150,
+                  "description": "Classic chocolate chip cookies with a perfect balance of sweet and chocolatey."
+                },
+                {
+                  "name": "biscotti",
+                  "id": "9lzu",
+                  "priceInCents": 150,
+                  "description": "Crunchy Italian biscotti, perfect for dipping in coffee or tea."
+                }
+            ]
+            expect(actual).toEqual(expected)
+        })
+
+        it("should return the original array if updated cookie name does not match", ()=>{
+            const input1 = 
+            [
+                {
+                  "name": "chocolate chip",
+                  "id": "Ffsu",
+                  "priceInCents": 150,
+                  "description": "Classic chocolate chip cookies with a perfect balance of sweet and chocolatey."
+                },
+                {
+                  "name": "biscotti",
+                  "id": "9lzu",
+                  "priceInCents": 150,
+                  "description": "Crunchy Italian biscotti, perfect for dipping in coffee or tea."
+                }
+            ]
+            const input2 = "9lzu"
+            const input3 = "banana creme"
+            const actual = update(input1, input2, input3)
+            const expected = [
+                {
+                  "name": "chocolate chip",
+                  "id": "Ffsu",
+                  "priceInCents": 150,
+                  "description": "Classic chocolate chip cookies with a perfect balance of sweet and chocolatey."
+                },
+                {
+                  "name": "biscotti",
+                  "id": "9lzu",
+                  "priceInCents": 150,
+                  "description": "Crunchy Italian biscotti, perfect for dipping in coffee or tea."
+                }
+            ]
+            expect(actual).toEqual(expected)
+        })
+
     })
 
     describe("destroy", ()=>{
@@ -212,6 +321,40 @@ describe("Cookie Controller Tests", ()=>{
             ]
             expect(actual).toEqual(expected)
         })
+
+        it("should return the original array if cookie id does not match any cookie object in the array", ()=>{
+            const input1 = [
+                {
+                  "name": "chocolate chip",
+                  "id": "Ffsu",
+                  "priceInCents": 150,
+                  "description": "Classic chocolate chip cookies with a perfect balance of sweet and chocolatey."
+                },
+                {
+                  "name": "biscotti",
+                  "id": "9lzu",
+                  "priceInCents": 150,
+                  "description": "Crunchy Italian biscotti, perfect for dipping in coffee or tea."
+                }
+            ]
+            const input2 = "Ac45"
+            const actual = destroy(input1, input2)
+            const expected = [
+                {
+                  "name": "chocolate chip",
+                  "id": "Ffsu",
+                  "priceInCents": 150,
+                  "description": "Classic chocolate chip cookies with a perfect balance of sweet and chocolatey."
+                },
+                {
+                  "name": "biscotti",
+                  "id": "9lzu",
+                  "priceInCents": 150,
+                  "description": "Crunchy Italian biscotti, perfect for dipping in coffee or tea."
+                }
+            ]
+            expect(actual).toEqual(expected)
+        })
     })
 
     describe("total", ()=>{
@@ -236,6 +379,13 @@ describe("Cookie Controller Tests", ()=>{
             "biscotti $1.50\n" +
             "(2 items) Total: $3.00"
             expect(actual).toEqual(expected)
+        })
+
+        it("should return $0.00 if cart is empty", ()=>{
+            const input = []
+            const actual = total(input)
+            const expected = "\n(0 items) Total: $0.00"
+            expect(actual).toBe(expected)
         })
     })
 
