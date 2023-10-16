@@ -43,6 +43,7 @@ npm run index
 
 ### Show
 - A user can see the details of a specific item by its unique ID.
+- Cookie ids __are__ case sensitive.
 >Use `npm run show <cookie-id>` to show details of an added cart item
 ```
 npm run show yFr7
@@ -78,6 +79,7 @@ npm run show nutfree
 ### Update
 - A user can update the details of an item in the cart, ensuring accurate and personalized information.
 - Cookie names are not case sensitive, but spaces do matter!
+- Cookie ids __are__ case sensitive.
 >Use `npm run update <cookie-id> <updated-cookie-name>` to change a current cart item to be a different item. 
 - 
 ```
@@ -103,6 +105,7 @@ npm run destroy all
 
 ### Destroy <ID>
 - Users can delete a specific item from the cart by providing its unique ID.
+- Cookie ids __are__ case sensitive.
 >Use `npm run destroy <cookie-id>` to remove a specific item from the cart.
 ```
 npm run destroy yFr7 

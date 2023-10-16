@@ -78,11 +78,10 @@ function show(cookies, cookieId) {
   function total(cookies) {
     const total = cookies.reduce((acc, current) => acc + current.priceInCents, 0);
     const count = {}
-    const cartItems = []
-
+    const cartItems = []    
+    
     for(let cookie of cookies){
       const name = cookie.name
-      // const priceInDollars = (cookie.priceInCents/100).toFixed(2)
       if(!count[name]){
         count[name] = 1
       } else {
